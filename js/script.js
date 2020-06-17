@@ -12,11 +12,39 @@ function getMoveName(argMoveId){
 }
 
 function displayResult(argComputerMove, argPlayerMove){
+  console.log('moves:', argComputerMove, argPlayerMove);
   if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
     printMessage('Ty wygrywasz!');
   }
+  else if(argComputerMove == 'kamień' && argPlayerMove == 'nozyczki'){
+      printMessage('Wygrał komputer!');
+    }
+  else if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+      printMessage('Remis');
+    }
+  else if(argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
+      printMessage('Remis');
+    }
+  else if(argComputerMove == 'nozyczki' && argPlayerMove == 'papier'){
+      printMessage('Wygrał komputer!');
+    }
+  else if(argComputerMove == 'nozyczki' && argPlayerMove == 'kamień'){
+      printMessage('Ty wygrywasz!');
+    }
+  else if(argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
+      printMessage('Wygrał komputer!');
+    }
+  else if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
+      printMessage('Remis');
+    }
+  else if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+      printMessage('Wygrał komputer!');
+    }
+  else if(argComputerMove == 'papier' && argPlayerMove == 'nozyczki'){
+      printMessage('Ty wygrywasz!');
+    }
   else {
-    printMessage('Wygrał komputer!');
+      printMessage('Nieznany ruch.');
   }
 }
 
@@ -24,7 +52,7 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
   
-let computerMove = getMoveName(randomNumber);
+let argComputerMove = getMoveName(randomNumber);
 
 /*
 if(randomNumber == 1){
@@ -38,14 +66,13 @@ else if (randomNumber == 3){
 }
 */
      
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Mój ruch to: ' + argComputerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = getMoveName(playerInput);
-
+let argPlayerMove = getMoveName(playerInput);
 
 /*
 if(playerInput == '1'){
@@ -58,9 +85,9 @@ else if(playerInput == '3'){
     playerMove = 'nozyczki';
   }
 */
-printMessage('Twój ruch to: ' + playerMove);
-
-displayResult()
+printMessage('Twój ruch to: ' + argPlayerMove);
+console.log ('wynik to:' + displayResult);
+printMessage('Wynik gry:' + displayResult);
 
 //za duzo tego kodu ponizej , wiem ze da sie to wpisac w trzy petle, jeszcze nie widze rozwiazania
 /*
