@@ -87,11 +87,11 @@ else if(playerInput == '3'){
 */
 printMessage('Ty wybrałeś: ' + argPlayerMove);
 
-let displayResult(argComputerMove, argPlayerMove);
+// w tym miejscu powinno byc wywolanie funkcji
 
 console.log ('wynik to:' + displayResult);
 
-printMessage('Wynik gry:' + displayResult);
+printMessage('Wynik gry: ' + displayResult);
 
 //za duzo tego kodu ponizej , wiem ze da sie to wpisac w trzy petle, jeszcze nie widze rozwiazania
 /*
@@ -103,7 +103,7 @@ else if(computerMove == 'kamień' && playerMove == 'nozyczki'){
   }
 else if(computerMove == 'kamień' && playerMove == 'kamień'){
     printMessage('Remis');
-  }
+  }noto
 else if(computerMove == 'nozyczki' && playerMove == 'nozyczki'){
     printMessage('Remis');
   }
