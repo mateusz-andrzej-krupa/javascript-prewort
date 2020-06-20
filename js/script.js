@@ -12,40 +12,43 @@ function getMoveName(argMoveId){
 }
 
 function displayResult(argComputerMove, argPlayerMove){
-  console.log('moves:', argComputerMove, argPlayerMove);
+  console.log('jesli to wydzisz to funkcja sie wykonuje!', 'komp>>>', argComputerMove, ' ty>>>', argPlayerMove);
   if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-    printMessage('Ty wygrywasz!');
+    score = 'Ty wygrywasz';
   }
   else if(argComputerMove == 'kamień' && argPlayerMove == 'nozyczki'){
-      printMessage('Wygrał komputer!');
+    score = 'Wygrał komputer!';
     }
   else if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-      printMessage('Remis');
+    score = 'Remis';
     }
   else if(argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
-      printMessage('Remis');
+    score = 'Remis';
     }
   else if(argComputerMove == 'nozyczki' && argPlayerMove == 'papier'){
-      printMessage('Wygrał komputer!');
+    score = 'Wygrał komputer!';
     }
   else if(argComputerMove == 'nozyczki' && argPlayerMove == 'kamień'){
-      printMessage('Ty wygrywasz!');
+    score = 'Ty wygrywasz!';
     }
   else if(argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
-      printMessage('Wygrał komputer!');
+    score = 'Wygrał komputer!';
     }
   else if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
-      printMessage('Remis');
+    score = 'Remis';
     }
   else if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-      printMessage('Wygrał komputer!');
+    score = 'Wygrał komputer!';
     }
   else if(argComputerMove == 'papier' && argPlayerMove == 'nozyczki'){
-      printMessage('Ty wygrywasz!');
+    score = 'Ty wygrywasz!';
     }
   else {
-      printMessage('Nieznany ruch.');
+    score = 'Nieznany ruch.';
   }
+  printMessage('Wynik (wyswietlone z poziomu funkcji): ' + score);
+  console.log('koniec funkcji displayResult');
+  return score;
 }
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -87,11 +90,11 @@ else if(playerInput == '3'){
 */
 printMessage('Ty wybrałeś: ' + argPlayerMove);
 
-// w tym miejscu powinno byc wywolanie funkcji
+var wynik = displayResult(argComputerMove, argPlayerMove)
 
-console.log ('wynik to:' + displayResult);
+console.log('wynik to: ' + wynik);
 
-printMessage('Wynik gry: ' + displayResult);
+printMessage('Wynik gry (wyświetlone z końcówki kodu): ' + wynik);
 
 //za duzo tego kodu ponizej , wiem ze da sie to wpisac w trzy petle, jeszcze nie widze rozwiazania
 /*
