@@ -66,9 +66,9 @@ else if (randomNumber == 3){
 }
 */
      
-printMessage('Mój ruch to: ' + argComputerMove);
+printMessage('Komputer wylosował: ' + argComputerMove);
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+let playerInput = prompt('Wybierz swój ruch: 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
 
@@ -85,8 +85,12 @@ else if(playerInput == '3'){
     playerMove = 'nozyczki';
   }
 */
-printMessage('Twój ruch to: ' + argPlayerMove);
+printMessage('Ty wybrałeś: ' + argPlayerMove);
+
+let displayResult(argComputerMove, argPlayerMove);
+
 console.log ('wynik to:' + displayResult);
+
 printMessage('Wynik gry:' + displayResult);
 
 //za duzo tego kodu ponizej , wiem ze da sie to wpisac w trzy petle, jeszcze nie widze rozwiazania
