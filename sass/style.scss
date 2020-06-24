@@ -1,0 +1,92 @@
+$color-one: #07031a;
+$color-two: #fbd46d;
+$color-three: #f4f6ff;
+$color-four: #4f8a8b;
+
+$font-header: 'MuseoModerno', sans-serif;
+$font-text: 'MuseoModerno', sans-serif;
+
+/*global*/
+body {
+    margin: 0 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: 'MuseoModerno', cursive;
+    color: $color-one;
+    background-color: $color-two;
+}
+/*header*/
+
+.header {
+    display: flex;
+    justify-content: center;
+   
+    background-color: $color-one;
+    align-items: center;
+    h1 {
+        font-size: 24px;
+        color: $color-two;
+        display: inline-block;
+        margin: 20px 50px;
+        text-align: center;
+    }
+    i {
+        font-size: 30px;
+        background: $color-three;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        color: $color-four;
+        border-radius: 50%;
+        text-align: center;
+        transition: all 1s;
+    }
+    i:hover {
+            transform: scale(0.6, 0.6);    
+        }
+}
+/*content*/
+.content {
+    display: flex;
+    justify-content: start;
+    margin: 50px 20px;
+    .col-r {
+        padding: 20px 0 5px 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        i {
+            
+            font-size: 30px;
+            background: transparent;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            color: $color-one;
+            border-radius: 50%;
+            text-align: center;
+            transition: all 1s;
+        }
+        i:hover {
+                transform: scale(1.9, 1.9);    
+            }
+    }
+}
+/*play*/
+/*score*/
+/*footer*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0px 0;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-four;
+    color: $color-three;
+    align-items: center;
+    i {
+        padding-left: 20px;
+    }
+}

@@ -3,17 +3,55 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<div class="container">
+	<section class="header">
+		<i class="fas fa-play"></i>
+		<h1>Zagrajmy w kamień, papier, nożyce!</h1>
+	</section>
+	<section class="content">
+		<div class="col-l">
+			<div class="instruction">
+				<h3>Instrukcja</h3>
+				<ol>
+					<li>Wybierz obrazek.</li>
+					<li>Kliknij jego!.</li>
+					<li>Komputer też wylosował.</li>
+					<li>Wynik jest napisany.</li>
+				</ol>
+				<h4>Powodzenia :)</h4>
+			</div>
+		</div>	
+		<div class="col-r">
+			<div class="icons">
+				<div class="container">
+					<i class="fas fa-gem" id="rock"></i>
+					<i class="far fa-hand-paper" id="paper"></i>
+					<i class="fas fa-cut" id="scissors"></i>
+				</div>
+			</div>
+			<div class="score">
+				<div class="container">
+					<div id="messages"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="footer">
+		<p>made by matti.co</p>
+		<i class="fas fa-glass-martini-alt"></i>
+	</section>
+	
+	<!--<div class="container">
 		<div id="buttons">
 			<button type="button" id="rock">Kamień</button>
 			<button type="button" id="paper">Papier</button>
 			<button type="button" id="scissors">Nozyczki</button>
 		</div>
-		<div id="messages"></div>
-	</div>
+	</div>-->
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
