@@ -98,7 +98,7 @@ function playGame (playerInput) {
 
   printMessage('Wynik gry (wyświetlone z końcówki kodu): ' + wynik);
 }
-
-document.getElementById('rock').addEventListener('click', playGame);
-document.getElementById('paper').addEventListener('click', function(){printMessage('wynik2')});
-document.getElementById('scissors').addEventListener('click', function(){printMessage('wynik3')});
+//playGame(2);
+document.getElementById('rock').addEventListener('click', function(){playGame(1);console.log('gracz nacisnal kamien');});
+document.getElementById('paper').addEventListener('click', function(){playGame(2);console.log('gracz nacisnal papier');});
+document.getElementById('scissors').addEventListener('click', function(){playGame(3);console.log('gracz nacisnal nozyczki')});
