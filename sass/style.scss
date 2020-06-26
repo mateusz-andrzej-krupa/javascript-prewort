@@ -47,18 +47,12 @@ body {
 /*content*/
 .content {
     display: flex;
-    justify-content: start;
+    justify-content: space-around;
     margin: 50px 20px;
-
-    
-    .col-r {
-        padding: 20px 0 5px 20px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-self: flex-start;
+    text-align: center;
+    .col-1 {
+        position: relative;
         i {
-            
             font-size: 30px;
             background: transparent;
             width: 60px;
@@ -72,6 +66,56 @@ body {
         i:hover {
                 transform: scale(1.9, 1.9);    
             }
+        p:first-of-type {
+            position: absolute;
+            margin: 0 0;
+            left: -50px;
+            top: 0px;
+            color: $color-three;
+            opacity: 0.4;
+            font-size: 144px;
+            font-weight: bold;
+            line-height: 1;
+            z-index: -1;
+        }
+    }
+    
+    .col-2   {
+        position: relative;
+        
+        p:first-of-type {
+            position: absolute;
+            margin: 0 0;
+            left: -50px;
+            top: 0px;
+            color: $color-three;
+            opacity: 0.4;
+            font-size: 144px;
+            font-weight: bold;
+            line-height: 1;
+            z-index: -1;
+        }
+    }
+    .col-3 {
+        position: relative;
+        p:first-of-type {
+            position: absolute;
+            margin: 0 0;
+            left: -50px;
+            top: 0px;
+            color: $color-three;
+            opacity: 0.4;
+            font-size: 144px;
+            font-weight: bold;
+            line-height: 1;
+            z-index: -1;
+        }
+        .score .container .scorefromjs {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        } 
+        
     }
 }
 
@@ -103,8 +147,16 @@ body {
         }
     }
     .content {
-        flex-direction: column-reverse;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        .col-2, .col-3 {
+            margin: 20px 0;
+            
+        }
+        .col-1 p:first-of-type, .col-2 p:first-of-type, .col-3 p:first-of-type {
+            left: 0;
+        }
+
         
     }
 }
@@ -116,6 +168,12 @@ body {
         }
         i {
             display: none;
+        }
+    }
+    .content {
+        .col-1 p:first-of-type, .col-2 p:first-of-type, .col-3 p:first-of-type {
+            left: -10px;
+            opacity: 0.2;
         }
     }
 }

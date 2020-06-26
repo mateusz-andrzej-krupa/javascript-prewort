@@ -47,24 +47,17 @@ body {
 .content {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: start;
-      justify-content: start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 50px 20px;
+  text-align: center;
 }
 
-.content .col-r {
-  padding: 20px 0 5px 20px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+.content .col-1 {
+  position: relative;
 }
 
-.content .col-r i {
+.content .col-1 i {
   font-size: 30px;
   background: transparent;
   width: 60px;
@@ -76,8 +69,61 @@ body {
   transition: all 1s;
 }
 
-.content .col-r i:hover {
+.content .col-1 i:hover {
   transform: scale(1.9, 1.9);
+}
+
+.content .col-1 p:first-of-type {
+  position: absolute;
+  margin: 0 0;
+  left: -50px;
+  top: 0px;
+  color: #f4f6ff;
+  opacity: 0.4;
+  font-size: 144px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: -1;
+}
+
+.content .col-2 {
+  position: relative;
+}
+
+.content .col-2 p:first-of-type {
+  position: absolute;
+  margin: 0 0;
+  left: -50px;
+  top: 0px;
+  color: #f4f6ff;
+  opacity: 0.4;
+  font-size: 144px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: -1;
+}
+
+.content .col-3 {
+  position: relative;
+}
+
+.content .col-3 p:first-of-type {
+  position: absolute;
+  margin: 0 0;
+  left: -50px;
+  top: 0px;
+  color: #f4f6ff;
+  opacity: 0.4;
+  font-size: 144px;
+  font-weight: bold;
+  line-height: 1;
+  z-index: -1;
+}
+
+.content .col-3 .score .container .scorefromjs {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
 }
 
 /*footer*/
@@ -113,10 +159,16 @@ body {
     transform: scale(0.5, 0.5);
   }
   .content {
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    -ms-flex-pack: center;
-        justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .content .col-2, .content .col-3 {
+    margin: 20px 0;
+  }
+  .content .col-1 p:first-of-type, .content .col-2 p:first-of-type, .content .col-3 p:first-of-type {
+    left: 0;
   }
 }
 
@@ -129,6 +181,10 @@ body {
   }
   .header i {
     display: none;
+  }
+  .content .col-1 p:first-of-type, .content .col-2 p:first-of-type, .content .col-3 p:first-of-type {
+    left: -10px;
+    opacity: 0.2;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -11,32 +11,37 @@
 <body>
 	<section class="header">
 		<i class="fas fa-play"></i>
-		<h1>Zagrajmy w kamień, papier, nożyce!</h1>
+		<h1>Zagraj w kamień, papier, nożyce!</h1>
 	</section>
 	<section class="content">
-		<div class="col-l">
+		<div class="col-1">
 			<div class="about">
-				<h3>Instrukcja</h3>
-				<ol>
-					<li>Wybierz obrazek.</li>
-					<li>Kliknij jego!.</li>
-					<li>Komputer też wylosował.</li>
-					<li>Wynik jest napisany.</li>
-				</ol>
-				<h4>Powodzenia :)</h4>
-			</div>
-		</div>	
-		<div class="col-r">
-			<div class="icons">
-				<div class="container">
-					<i class="fas fa-gem" id="rock"></i>
-					<i class="far fa-hand-paper" id="paper"></i>
-					<i class="fas fa-cut" id="scissors"></i>
+				<h3>Wybierz i kliknij:</h3>
+				<div class="icons">
+					<div class="container">
+						<i class="fas fa-gem" id="rock"></i>
+						<i class="far fa-hand-paper" id="paper"></i>
+						<i class="fas fa-cut" id="scissors"></i>
+					</div>
+					<p>1</p>
 				</div>
 			</div>
+		</div>	
+		<div class="col-2">
+			<div class="comp">
+				<div class="container">
+					<h3>Komputer wybrał:</h3>
+					<div id="messageComp"></div>
+					<p>2</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-3">
 			<div class="score">
 				<div class="container">
-					<div id="messages"></div>
+					<h3>Wynik:</h3>
+					<div class="scorefromjs" id="messages"></div>
+					<p>3</p>
 				</div>
 			</div>
 		</div>

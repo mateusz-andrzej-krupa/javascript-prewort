@@ -2,6 +2,7 @@ function playGame (playerInput) {
   clearMessages();
   function getMoveName(argMoveId){
     if(argMoveId == 1){
+      let kamień = document.getElementById('rock');
       return 'kamień';
     } else if(argMoveId == 2){
       return 'papier';
@@ -16,39 +17,39 @@ function playGame (playerInput) {
   function displayResult(argComputerMove, argPlayerMove){
     console.log('jesli to wydzisz to funkcja sie wykonuje!', 'komp>>>', argComputerMove, ' ty>>>', argPlayerMove);
     if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-      score = 'Ty wygrywasz';
+      score = 'Wygrałeś :)';
     }
     else if(argComputerMove == 'kamień' && argPlayerMove == 'nozyczki'){
-      score = 'Wygrał komputer!';
+      score = 'Przegrałeś :*(';
       }
     else if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-      score = 'Remis';
+      score = 'Remis :|';
       }
     else if(argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
-      score = 'Remis';
+      score = 'Remis :|';
       }
     else if(argComputerMove == 'nozyczki' && argPlayerMove == 'papier'){
-      score = 'Wygrał komputer!';
+      score = 'Przegrałeś :*(';
       }
     else if(argComputerMove == 'nozyczki' && argPlayerMove == 'kamień'){
-      score = 'Ty wygrywasz!';
+      score = 'Wygrałeś :)';
       }
     else if(argComputerMove == 'nozyczki' && argPlayerMove == 'nozyczki'){
-      score = 'Wygrał komputer!';
+      score = 'Przegrałeś :*(';
       }
     else if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
-      score = 'Remis';
+      score = 'Remis :|';
       }
     else if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-      score = 'Wygrał komputer!';
+      score = 'Przegrałeś :*(';
       }
     else if(argComputerMove == 'papier' && argPlayerMove == 'nozyczki'){
-      score = 'Ty wygrywasz!';
+      score = 'Wygrałeś :)';
       }
     else {
       score = 'Nieznany ruch.';
     }
-    printMessage('Wynik (wyswietlone z poziomu funkcji): ' + score);
+    printMessage(score);
     console.log('koniec funkcji displayResult');
     return score;
   }
@@ -71,7 +72,7 @@ function playGame (playerInput) {
   }
   */
       
-  printMessage('Komputer wylosował: ' + argComputerMove);
+  printMessageComp(argComputerMove); //Komputer wybrał;
 
   //let playerInput = prompt('Wybierz swój ruch: 1: kamień, 2: papier, 3: nożyce.');
 
@@ -90,13 +91,13 @@ function playGame (playerInput) {
       playerMove = 'nozyczki';
     }
   */
-  printMessage('Ty wybrałeś: ' + argPlayerMove);
+  //printMessage('Ty wybrałeś: ' + argPlayerMove);
 
   var wynik = displayResult(argComputerMove, argPlayerMove)
 
   console.log('wynik to: ' + wynik);
 
-  printMessage('Wynik gry (wyświetlone z końcówki kodu): ' + wynik);
+  //printMessage('Wynik gry (wyświetlone z końcówki kodu): ' + wynik);
 }
 //playGame(2);
 document.getElementById('rock').addEventListener('click', function(){playGame(1);console.log('gracz nacisnal kamien');});
