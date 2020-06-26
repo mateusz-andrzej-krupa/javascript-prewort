@@ -60,6 +60,8 @@ body {
       justify-content: center;
   -ms-flex-direction: column;
       flex-direction: column;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .content .col-r i {
@@ -78,8 +80,6 @@ body {
   transform: scale(1.9, 1.9);
 }
 
-/*play*/
-/*score*/
 /*footer*/
 .footer {
   position: fixed;
@@ -99,5 +99,36 @@ body {
 
 .footer i {
   padding-left: 20px;
+}
+
+/*media*/
+@media (max-width: 767px) {
+  .header {
+    transition: all 1s;
+  }
+  .header h1 {
+    font-size: 18px;
+  }
+  .header i {
+    transform: scale(0.5, 0.5);
+  }
+  .content {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+}
+
+@media (max-width: 486px) {
+  .header {
+    transition: all 1s;
+  }
+  .header h1 {
+    font-size: 14px;
+  }
+  .header i {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -20,7 +20,6 @@ body {
 .header {
     display: flex;
     justify-content: center;
-   
     background-color: $color-one;
     align-items: center;
     h1 {
@@ -50,11 +49,14 @@ body {
     display: flex;
     justify-content: start;
     margin: 50px 20px;
+
+    
     .col-r {
         padding: 20px 0 5px 20px;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        align-self: flex-start;
         i {
             
             font-size: 30px;
@@ -72,8 +74,7 @@ body {
             }
     }
 }
-/*play*/
-/*score*/
+
 /*footer*/
 .footer {
     position: fixed;
@@ -88,5 +89,33 @@ body {
     align-items: center;
     i {
         padding-left: 20px;
+    }
+}
+/*media*/
+@media (max-width: 767px) {
+    .header {
+        transition: all 1s;
+        h1 {
+            font-size: 18px;
+        }
+        i {
+            transform: scale(0.5, 0.5);
+        }
+    }
+    .content {
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+    }
+}
+@media (max-width: 486px) {
+    .header {
+        transition: all 1s;
+        h1 {
+            font-size: 14px;
+        }
+        i {
+            display: none;
+        }
     }
 }
