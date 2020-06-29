@@ -1,3 +1,4 @@
+{
 function playGame (playerInput) {
   clearMessages();
   function getMoveName(argMoveId){
@@ -103,3 +104,5 @@ function playGame (playerInput) {
 document.getElementById('rock').addEventListener('click', function(){playGame(1);console.log('gracz nacisnal kamien');});
 document.getElementById('paper').addEventListener('click', function(){playGame(2);console.log('gracz nacisnal papier');});
 document.getElementById('scissors').addEventListener('click', function(){playGame(3);console.log('gracz nacisnal nozyczki')});
+
+}
