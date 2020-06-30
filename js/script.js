@@ -3,7 +3,7 @@ function playGame (playerInput) {
   clearMessages();
   function getMoveName(argMoveId){
     if(argMoveId == 1){
-      let kamień = document.getElementById('rock');
+      const kamień = document.getElementById('rock');
       return 'kamień';
     } else if(argMoveId == 2){
       return 'papier';
@@ -55,11 +55,11 @@ function playGame (playerInput) {
     return score;
   }
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
     
-  let argComputerMove = getMoveName(randomNumber);
+  const argComputerMove = getMoveName(randomNumber);
 
   /*
   if(randomNumber == 1){
@@ -79,7 +79,7 @@ function playGame (playerInput) {
 
   console.log('Gracz wpisał: ' + playerInput);
 
-  let argPlayerMove = getMoveName(playerInput);
+  const argPlayerMove = getMoveName(playerInput);
 
   /*
   if(playerInput == '1'){
@@ -94,7 +94,7 @@ function playGame (playerInput) {
   */
   //printMessage('Ty wybrałeś: ' + argPlayerMove);
 
-  var wynik = displayResult(argComputerMove, argPlayerMove)
+  const wynik = displayResult(argComputerMove, argPlayerMove)
 
   console.log('wynik to: ' + wynik);
 
